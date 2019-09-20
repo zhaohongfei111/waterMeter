@@ -1,0 +1,32 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/pay/index/index",
+        "pages/search/index/index",
+        "pages/mine/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "selectedColor": "#169BD5",
+        "list": [{
+                "pagePath": "pages/pay/index/index",
+                "text": "支付"
+            },
+            {
+                "pagePath": "pages/search/index/index",
+                "text": "2"
+            },
+            {
+                "pagePath": "pages/mine/index/index",
+                "text": "3"
+            }
+        ]
+    }
+}
