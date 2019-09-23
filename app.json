@@ -17,15 +17,21 @@
         "selectedColor": "#169BD5",
         "list": [{
                 "pagePath": "pages/pay/index/index",
-                "text": "支付"
+                "text": "充值",
+                "iconPath": "./images/pay.png",
+                "selectedIconPath": "./images/payClick.png"
             },
             {
                 "pagePath": "pages/search/index/index",
-                "text": "2"
+                "text": "查询",
+                "iconPath": "./images/search.png",
+                "selectedIconPath": "./images/searchClick.png"
             },
             {
                 "pagePath": "pages/mine/index/index",
-                "text": "3"
+                "text": "我的",
+                "iconPath": "./images/mine.png",
+                "selectedIconPath": "./images/mineClick.png"
             }
         ]
     }

@@ -5,3 +5,6 @@
     </swiper-item>
   </block>
 </swiper>
+<view class= "wrap">
+  <view >充值缴费</view>
+</view>

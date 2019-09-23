@@ -1,12 +1,43 @@
-/* pages/pay/index/index.wxss */
-.u-wrp-bnr {
-  width: 100%;
-  height: 400rpx;
-  display: block;
-  position: relative;
-  background: #f0f0f0;
-}
-.u-img-slide {
-  width: 100%;
-  height: inherit;
-}
+    /* pages/pay/index/index.wxss */
+    
+    .u-wrp-bnr {
+        width: 100%;
+        height: 300rpx;
+        display: block;
+        position: relative;
+        background: #f0f0f0;
+    }
+    
+    .u-img-slide {
+        width: 100%;
+        height: inherit;
+    }
+    
+    .wrap {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        margin-top: 20rpx;
+    }
+    
+    .wrap view {
+        line-height: 40rpx;
+    }
+    
+    .wrap view:after,
+    .wrap view:before {
+        position: absolute;
+        top: 50%;
+        background: #777;
+        content: "";
+        height: 1px;
+        width: 25%;
+    }
+    
+    .wrap view:before {
+        left: 15%;
+    }
+    
+    .wrap view:after {
+        right: 15%;
+    }
