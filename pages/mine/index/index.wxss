@@ -1,1 +1,32 @@
-/* pages/mine/index/index.wxss */
+    /* pages/mine/index/index.wxss */
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60rpx 0;
+        box-sizing: border-box;
+        background: #1296DB;
+    }
+    
+    .userinfo {
+        margin-bottom: 40rpx;
+    }
+    
+    .userinfo image {
+        display: block;
+        width: 200rpx;
+        height: 200rpx;
+        border-radius: 50%;
+    }
+    
+    .userinfo-nickname {
+        display: block;
+        line-height: 3;
+        color: #333;
+    }
+    
+    .cell2 {
+        margin-top: 20rpx;
+    }

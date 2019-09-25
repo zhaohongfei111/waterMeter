@@ -1,0 +1,19 @@
+<!--pages/mine/addMeter/index.wxml-->
+<view class="container1">
+    <view >
+         <i-input value="{{meterInfo.meterAdd}}" title="水表编号" autofocus placeholder="请输入水表编号" maxlength="100"/>
+     </view>
+     <view >
+         <i-button bind:click="handleScan" type="primary" >扫码获取水表编号</i-button>
+         <i-button bind:click="handleBind" type="primary" >绑定</i-button>
+     </view>
+    
+<modal hidden="{{!visiable}}" title="绑定水表信息" confirm-text="确认" cancel-text="取消" bindcancel="bindSubmitCancle" bindconfirm="bindSubmitConfirm">
+    <i-input value="{{ meterInfo.userName }}" title="用户" disabled />
+    <i-input value="{{ meterInfo.valueStatus }}"  title="状态"  disabled/>
+</modal>
+
+<modal hidden="{{!visiableDialog}}" title="请输入正确的水表号" confirm-text="确认" cancel-text="取消"  bindconfirm="bindDialogConfirm" no-cancel="true">
+</modal>
+</view>
+

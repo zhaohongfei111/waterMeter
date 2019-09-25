@@ -41,3 +41,7 @@
     .wrap view:after {
         right: 15%;
     }
+    
+    .userInfo {
+        margin-top: 60rpx;
+    }

@@ -1,0 +1,41 @@
+/* pages/mine/bindInfo/index.wxss */
+
+.bindBtn {
+    height: 200rpx;
+    line-height: 200rpx;
+    width: 750rpx;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 1px solid #CACACA
+}
+
+.unbindBtn {
+    margin-top: 20px;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 20px;
+    color: #000;
+    background: #ffffff
+}
+
+.nodata {
+    width: 750rpx;
+    height: 300rpx;
+    line-height: 300rpx;
+    text-align: center;
+}
+
+.meterList {
+    width: 750rpx;
+    margin-top: 100rpx;
+}
+
+.meterItem {
+    width: 710rpx;
+    margin-left: 20rpx;
+    line-height: 80rpx;
+    text-align: center;
+    border: 1px solid #CACACA;
+    box-shadow: 2px 2px #CACACA;
+    margin-top: 30rpx;
+}

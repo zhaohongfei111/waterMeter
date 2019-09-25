@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+    "usingComponents": {
+        "i-cell-group": "../../components/cell-group/index",
+        "i-cell": "../../components/cell/index"
+    }
 }

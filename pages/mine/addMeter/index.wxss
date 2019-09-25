@@ -1,0 +1,12 @@
+/* pages/mine/addMeter/index.wxss */
+
+.container1 {
+    width: 750rpx;
+    background: #fff;
+}
+
+.container1>view {
+    width: 700rpx;
+    margin-left: 25rpx;
+    margin-top: 40rpx;
+}

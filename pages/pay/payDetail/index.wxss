@@ -1,0 +1,42 @@
+.pay {
+    background-color: rgba(128, 128, 128, 0.075);
+    padding-top: 40rpx;
+}
+
+.b_head {
+    text-align: center;
+    margin-bottom: 20rpx;
+}
+
+.money_charge {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.money_box {
+    height: 130rpx;
+    width: 200rpx;
+    border-radius: 8%;
+    text-align: center;
+    line-height: 130rpx;
+    margin-top: 20rpx;
+    border: 1rpx grey solid;
+    color: grey;
+    background-color: white;
+    margin-bottom: 20rpx;
+}
+
+.money_box1 {
+    border: 1rpx rgb(11, 235, 11) solid;
+    color: rgb(11, 235, 11);
+    height: 130rpx;
+    width: 200rpx;
+    border-radius: 8%;
+    text-align: center;
+    line-height: 130rpx;
+    background-color: white;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}

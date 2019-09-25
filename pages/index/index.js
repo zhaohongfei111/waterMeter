@@ -16,7 +16,10 @@ Page({
         })
     },
     onLoad: function() {
+        this.switchPage();
+    },
 
+    switchPage: function() { //首页获取jwt验证后跳转
         if (app.globalData.userInfo) {
             this.setData({
                 userInfo: app.globalData.userInfo,
@@ -43,22 +46,95 @@ Page({
                 }
             })
         };
+        var that = this;
         wx.getSetting({
+
             success: function(res) {
                 if (res.authSetting['scope.userInfo']) {
-                    wx.switchTab({ //已经授权过就跳过授权
-                        url: "/pages/pay/index/index"
+                    wx.request({
+                        url: app.data.apiUrl + 'TokenAuth/Authenticate',
+                        method: 'POST',
+                        data: {
+                            "userNameOrEmailAddress": "admin",
+                            "password": "123qwe"
+                        },
+                        success: function(res) {
+                            if (res.statusCode == "200") {
+                                wx.setStorageSync('jwt', res.data.result.accessToken)
+                                app.globalData.token = res.data.result.accessToken;
+                                wx.login({
+                                    success: res => {
+                                        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                                        wx.request({
+                                            url: `${app.data.dingApi}Code2Session?code=${res.code}`,
+                                            method: 'GET',
+                                            header: {
+                                                Authorization: `Bearer ${app.globalData.token}`
+                                            },
+                                            success: function(res) {
+                                                if (res.statusCode == "200") {
+                                                    app.globalData.openid = res.data.openid;
+                                                    app.globalData.session_key = res.data.session_key;
+                                                    //that.getBindInfo(that);
+                                                    wx.request({
+                                                        url: `${app.data.dingApi}Getbindings?openid=${app.globalData.openid}`,
+                                                        method: 'GET',
+                                                        header: {
+                                                            Authorization: `Bearer ${app.globalData.token}`
+                                                        },
+                                                        success: function(res) {
+                                                            if (res.statusCode == "200") {
+                                                                app.globalData.bindInfo = res.data.result;
+                                                                that.setData({
+                                                                    bindInfo: app.globalData.bindInfo
+                                                                })
+                                                                wx.switchTab({ //已经授权过就跳过授权
+                                                                    url: "/pages/pay/index/index"
+                                                                })
+                                                            }
+                                                        }
+                                                    })
+
+                                                }
+                                            }
+                                        })
+                                    }
+                                })
+                            }
+                        }
                     })
+
+
+                    // wx.request({
+                    //     url: `${app.data.dingApi}Getbindings?openid=${app.globalData.openid}`,
+                    //     method: 'GET',
+                    //     header: {
+                    //         Authorization: `Bearer ${app.globalData.token}`
+                    //     },
+                    //     success: function(res) {
+                    //         if (res.statusCode == "200") {
+                    //             app.globalData.bindInfo = res.data.result;
+                    //             that.setData({
+                    //                 bindInfo: app.globalData.bindInfo
+                    //             })
+                    //             wx.switchTab({ //已经授权过就跳过授权
+                    //                 url: "/pages/pay/index/index"
+                    //             })
+                    //         }
+                    //     }
+                    // })
+
+
+
+
+
                 } else {
 
                 }
             }
         })
-
     },
-
     getUserInfo: function(e) {
-        console.log(e)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
             userInfo: e.detail.userInfo,
