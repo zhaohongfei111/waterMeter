@@ -54,7 +54,7 @@ Page({
         var that = this;
         this.data.meterInfo.openid = app.globalData.openid;
         wx.request({
-            url: `${app.data.dingApi}Setbinding`,
+            url: `${app.data.dingApi}wxuser/Setbinding`,
             method: 'POST',
             header: {
                 Authorization: `Bearer ${app.globalData.token}`
@@ -64,7 +64,7 @@ Page({
                 if (res.statusCode == "200") {
                     if (res.data.code == 0) {
                         wx.request({
-                            url: `${app.data.dingApi}Getbindings?openid=${app.globalData.openid}`,
+                            url: `${app.data.dingApi}wxuser/Getbindings?openid=${app.globalData.openid}`,
                             method: 'GET',
                             header: {
                                 Authorization: `Bearer ${app.globalData.token}`

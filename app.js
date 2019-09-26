@@ -2,7 +2,7 @@
 App({
     data: {
         apiUrl: "https://meterapi.jsjymgroup.com/api/",
-        dingApi: "https://miniapp.dingxuanwei.com/api/wxuser/"
+        dingApi: "https://miniapp.dingxuanwei.com/api/"
     },
     onLaunch: function() {
         // 展示本地存储能力
@@ -40,7 +40,7 @@ App({
     //             success: res => {
     //                 // 发送 res.code 到后台换取 openId, sessionKey, unionId
     //                 wx.request({
-    //                     url: `${that.data.dingApi}Code2Session?code=${res.code}`,
+    //                     url: `${that.data.dingApi}wxuser/Code2Session?code=${res.code}`,
     //                     method: 'GET',
     //                     header: {
     //                         Authorization: `Bearer ${that.globalData.token}`
@@ -80,7 +80,7 @@ App({
     },
     getBindInfo: function(that) {
         wx.request({
-            url: `${that.data.dingApi}Getbindings?openid=${that.globalData.openid}`,
+            url: `${that.data.dingApi}wxuser/Getbindings?openid=${that.globalData.openid}`,
             method: 'GET',
             header: {
                 Authorization: `Bearer ${that.globalData.token}`

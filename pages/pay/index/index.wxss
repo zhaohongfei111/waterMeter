@@ -43,5 +43,5 @@
     }
     
     .userInfo {
-        margin-top: 60rpx;
+        margin-top: 80rpx;
     }

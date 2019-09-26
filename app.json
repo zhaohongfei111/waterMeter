@@ -20,15 +20,15 @@
         "selectedColor": "#169BD5",
         "list": [{
                 "pagePath": "pages/pay/index/index",
-                "text": "充值",
-                "iconPath": "./images/pay.png",
-                "selectedIconPath": "./images/payClick.png"
-            },
-            {
-                "pagePath": "pages/search/index/index",
                 "text": "查询",
                 "iconPath": "./images/search.png",
                 "selectedIconPath": "./images/searchClick.png"
+            },
+            {
+                "pagePath": "pages/search/index/index",
+                "text": "充值",
+                "iconPath": "./images/pay.png",
+                "selectedIconPath": "./images/payClick.png"
             },
             {
                 "pagePath": "pages/mine/index/index",

@@ -6,15 +6,14 @@
   </block>
 </swiper>
 <view class= "wrap">
-  <view >充值缴费</view>
+  <view >水表查询</view>
 </view>
 <view class="userInfo">
  <i-cell-group>
-    <i-cell title="用户" bind:click="click" value="无"></i-cell>
      <picker bindchange="bindPickerChange" value="{{index}}" range="{{bindInfo}}" range-key="{{'userName'}}">
       <view class="picker">
-        <i-cell title="选择水表"  >
-          <text slot="footer">123</text>
+        <i-cell title="选择水表"  is-link>
+          <text slot="footer">{{selectInfo.userName}}</text>
         </i-cell>
       </view>
       </picker>

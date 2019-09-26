@@ -26,7 +26,7 @@ Page({
             userId: app.globalData.bindInfo[0].userId
         }
         wx.request({
-            url: `${app.data.dingApi}RemoveBindings`,
+            url: `${app.data.dingApi}wxuser/RemoveBindings`,
             method: 'POST',
             header: {
                 Authorization: `Bearer ${app.globalData.token}`
@@ -36,7 +36,7 @@ Page({
                 if (res.statusCode == "200") {
                     //if (res.data.code == 0) {
                     wx.request({
-                        url: `${app.data.dingApi}Getbindings?openid=${app.globalData.openid}`,
+                        url: `${app.data.dingApi}wxuser/Getbindings?openid=${app.globalData.openid}`,
                         method: 'GET',
                         header: {
                             Authorization: `Bearer ${app.globalData.token}`
