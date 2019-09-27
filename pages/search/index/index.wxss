@@ -1,1 +1,23 @@
 /* pages/search/search/index.wxss */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 100rpx 0;
+}
+
+.container>view {
+    width: 50%;
+    height: 400rpx;
+    line-height: 400rpx;
+    text-align: center;
+}
+
+.container>view>view {
+    width: 80%;
+    background: #CACACA;
+    margin-left: 10%;
+    height: 300rpx;
+    line-height: 300rpx;
+}

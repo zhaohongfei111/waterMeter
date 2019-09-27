@@ -15,12 +15,12 @@ Page({
     },
     handleScan: function() {
         var that = this;
-        // wx.scanCode({
-        //     success(res) {
-        //         console.log(res)
-        //     }
-        // })
-        this.scanResult("43061908130900", that)
+        wx.scanCode({
+            success(res) {
+                this.scanResult("43061908130900", that)
+            }
+        })
+
     },
     scanResult: function(meterAdd, that) {
         that.setData({ meterAdd: meterAdd })

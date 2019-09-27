@@ -1,2 +1,26 @@
 <!--pages/search/search/index.wxml-->
-<text>pages/search/search/index.wxml</text>
+
+<view class="container">
+    <view >
+        <view class="pay">
+            <view >充值</view>
+        </view>
+    </view>
+    <view >
+        <view class="openValve">
+            <view >
+            自助开阀
+            </view>
+        </view>
+    </view>
+    <view class="changeDefault">
+            <view >
+            修改默认
+            </view>
+            </view>
+    <view class="changeDefault">
+           <view >
+            支付记录
+            </view>
+        </view>
+</view>
