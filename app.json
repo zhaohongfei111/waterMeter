@@ -1,5 +1,6 @@
 {
     "pages": [
+        "pages/pay/payRecord/index",
         "pages/index/index",
         "pages/mine/addMeter/index",
         "pages/logs/logs",
@@ -7,7 +8,10 @@
         "pages/search/index/index",
         "pages/mine/index/index",
         "pages/pay/payDetail/index",
-        "pages/mine/bindInfo/index"
+        "pages/mine/bindInfo/index",
+        "pages/pay/openVavle/index",
+        "pages/pay/changeDefault/index"
+
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -19,13 +23,13 @@
     "tabBar": {
         "selectedColor": "#169BD5",
         "list": [{
-                "pagePath": "pages/pay/index/index",
+                "pagePath": "pages/search/index/index",
                 "text": "查询",
                 "iconPath": "./images/search.png",
                 "selectedIconPath": "./images/searchClick.png"
             },
             {
-                "pagePath": "pages/search/index/index",
+                "pagePath": "pages/pay/index/index",
                 "text": "充值",
                 "iconPath": "./images/pay.png",
                 "selectedIconPath": "./images/payClick.png"

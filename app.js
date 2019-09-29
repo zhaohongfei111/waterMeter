@@ -88,7 +88,7 @@ App({
             success: function(res) {
                 if (res.statusCode == "200") {
                     console.log(res)
-                    that.globalData.bindInfo = res.data.result
+                        //that.globalData.bindInfo = res.data.result
                 }
             }
         })
@@ -98,43 +98,44 @@ App({
         openid: "",
         session_key: "",
         userInfo: null,
-        bindInfo: [
-            // {
-            //     "userId": "1",
-            //     "userCode": "1",
-            //     "userName": "1",
-            //     "linkMan": "1",
-            //     "telephone": "1",
-            //     "areaName": "1",
-            //     "buildingName": "1",
-            //     "houseNumber": "1",
-            //     "userAddress": "1",
-            //     "meterAdd": "水表1",
-            //     "balanceType": "1",
-            //     "peopleNumber": 0,
-            //     "installDate": "2019-09-24T07:03:15.983Z",
-            //     "valueStatus": "关",
-            //     "lastReading": 0,
-            //     "lastDate": "2019-09-24T07:03:15.983Z"
-            // },
-            // {
-            //     "userId": "2",
-            //     "userCode": "2",
-            //     "userName": "2",
-            //     "linkMan": "2",
-            //     "telephone": "2",
-            //     "areaName": "2",
-            //     "buildingName": "2",
-            //     "houseNumber": "2",
-            //     "userAddress": "2",
-            //     "meterAdd": "水表2",
-            //     "balanceType": "2",
-            //     "peopleNumber": 0,
-            //     "installDate": "2019-09-24T07:03:15.983Z",
-            //     "valueStatus": "2",
-            //     "lastReading": 0,
-            //     "lastDate": "2019-09-24T07:03:15.983Z"
-            // },
+        bindInfo: [{
+                "userId": "1",
+                "userCode": "1",
+                "userName": "1",
+                "linkMan": "1",
+                "telephone": "1",
+                "areaName": "1",
+                "buildingName": "1",
+                "houseNumber": "1",
+                "userAddress": "1",
+                "meterAdd": "水表1",
+                "balanceType": "1",
+                "peopleNumber": 0,
+                "installDate": "2019-09-24T07:03:15.983Z",
+                "valueStatus": "关",
+                "lastReading": 0,
+                "lastDate": "2019-09-24T07:03:15.983Z",
+                "isDefault": 1
+            },
+            {
+                "userId": "2",
+                "userCode": "2",
+                "userName": "2",
+                "linkMan": "2",
+                "telephone": "2",
+                "areaName": "2",
+                "buildingName": "2",
+                "houseNumber": "2",
+                "userAddress": "2",
+                "meterAdd": "水表2",
+                "balanceType": "2",
+                "peopleNumber": 0,
+                "installDate": "2019-09-24T07:03:15.983Z",
+                "valueStatus": "2",
+                "lastReading": 0,
+                "lastDate": "2019-09-24T07:03:15.983Z",
+                "isDefault": 0
+            },
 
         ]
     }

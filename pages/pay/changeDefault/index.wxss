@@ -1,0 +1,5 @@
+/* pages/pay/changeDefault/index.wxss */
+
+.red {
+    color: red
+}

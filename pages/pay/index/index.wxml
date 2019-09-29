@@ -1,31 +1,28 @@
-<swiper class='u-wrp-bnr' indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
-  <block wx:for="{{imgUrls}}" wx:for-index="index">
-    <swiper-item>
-      <image src='{{item}}' class='u-img-slide' mode='aspectFill'></image>
-    </swiper-item>
-  </block>
-</swiper>
-<view class= "wrap">
-  <view >水表查询</view>
-</view>
-<view class="userInfo">
- <i-cell-group>
-     <picker bindchange="bindPickerChange" value="{{index}}" range="{{bindInfo}}" range-key="{{'userName'}}">
-      <view class="picker">
-        <i-cell title="选择水表"  is-link>
-          <text slot="footer">{{selectInfo.userName}}</text>
-        </i-cell>
-      </view>
-      </picker>
-    
-    
-    <i-cell title="抄表时间" bind:click="click" value="{{selectInfo.lastDate}}"></i-cell>
-    <i-cell title="当前剩余" bind:click="click" value="{{selectInfo.lastReading}}"></i-cell>
-    <i-cell title="累计用量" bind:click="click" value="{{selectInfo.peopleNumber}}"></i-cell>
-    <i-cell title="表状态" bind:click="click" value="{{selectInfo.valueStatus}}"></i-cell>
-</i-cell-group>
-<i-button bind:click="handleClick" type="primary" size="small" bindtap="toPayDetail">充值</i-button>
-<modal hidden="{{!visiable}}" title="请先绑定信息" confirm-text="确定" cancel-text="自定义取消按钮" bindcancel="cancel" bindconfirm="confirm" no-cancel="true">
-      
-</modal>
+<!--pages/search/search/index.wxml-->
+
+<view class="container">
+    <view >
+        <view class="pay" bindtap="toPayDetail">
+            <image class="icon" src = "../../../images/handlePay1.png" />
+            <view >充值</view>
+        </view>
+    </view>
+    <view >
+        <view class="openValve" bindtap = "toOpenValve">
+          <image class="icon" src = "../../../images/openValve1.png" />
+            <view >自助开阀</view>
+        </view>
+    </view>
+    <view>
+        <view class="changeDefault" bindtap = "toChangeDefault">
+            <image class="icon" src = "../../../images/changeDefault1.png" />
+            <view >修改默认</view>
+        </view>  
+    </view>
+    <view>
+        <view class="payRecord" bindtap = "toPayRecord">
+            <image class="icon" src = "../../../images/payRecord1.png" />
+            <view >支付记录</view>
+        </view>
+    </view>
 </view>

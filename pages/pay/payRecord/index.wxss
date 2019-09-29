@@ -1,0 +1,10 @@
+/* pages/pay/payRecord/index.wxss */
+
+.scrollView {
+    /* margin-top: 20rpx; */
+    height: calc(100vh-20rpx);
+}
+
+view.card {
+    margin-top: 0rpx;
+}

@@ -40,3 +40,7 @@
     margin-top: 20rpx;
     margin-bottom: 20rpx;
 }
+
+.selectView {
+    margin-top: 20rpx;
+}

@@ -2,6 +2,6 @@
     "usingComponents": {
         "i-button": "../../components/button/index",
         "i-cell-group": "../../components/cell-group/index",
-        "i-cell": "../../components/cell2/index"
+        "i-cell": "../../components/cell/index"
     }
 }

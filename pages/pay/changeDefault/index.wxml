@@ -1,0 +1,7 @@
+<!--pages/pay/changeDefault/index.wxml-->
+<i-cell-group>
+    <i-cell wx:for="{{bindInfo}}" bind:click="selectDefault" data-listIndex="{{index}}" title="{{item.userName}}" i-class="{{index==selectIndex?'red':''}}">
+        <text slot = "footer">{{item.userName==1?'默认':''}}</text>
+    </i-cell>
+</i-cell-group>
+<i-button  type="primary" size="small" bindtap="bindDefault">绑定默认</i-button>

@@ -1,0 +1,35 @@
+<!-- pages/pay/payRecord/index.wxml -->
+
+<view class="section">
+  <view class="section__title">日期选择器</view>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+</view>
+<view>
+    <scroll-view class="scrollView" scroll-y="true">
+        <view class="">
+            <i-card title="卡片标题">
+                <!-- <view slot="content">内容不错</view> -->
+                <view slot="footer">尾部内容</view>
+            </i-card>
+        </view>
+        <view class="card">
+            <i-card title="卡片标题">
+                <!-- <view slot="content">内容不错</view> -->
+                <view slot="footer">尾部内容</view>
+            </i-card>
+        </view>
+        <view class="card">
+            <i-card title="用户1">
+                <!-- <view slot="content">内容不错</view> -->
+                <view slot="footer">
+                    充值时间：2019-09-24 13:35:23
+                    <view style="float:right">充值金额：120元</view>
+                </view>
+            </i-card>
+        </view>
+    </scroll-view>
+</view>

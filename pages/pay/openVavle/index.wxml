@@ -1,0 +1,19 @@
+<!--pages/search/openVavle/index.wxml-->
+ <view class="selectView">
+<i-cell-group>
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{bindInfo}}" range-key="{{'userName'}}">
+      <view class="picker">
+        <i-cell title="选择水表"  is-link>
+          <text slot="footer">{{selectInfo.userName}}</text>
+        </i-cell>
+      </view>
+      </picker>
+    <i-cell title="抄表时间" bind:click="click" value="{{selectInfo.lastDate}}"></i-cell>
+    <i-cell title="当前剩余" bind:click="click" value="{{selectInfo.lastReading}}"></i-cell>
+    <i-cell title="累计用量" bind:click="click" value="{{selectInfo.peopleNumber}}"></i-cell>
+    <i-cell title="表状态" bind:click="click" value="{{selectInfo.valueStatus}}"></i-cell>
+</i-cell-group>
+</view>
+<view > 
+    <i-button  type="primary" size="small" >开阀</i-button>
+</view>

@@ -84,7 +84,7 @@ Page({
                                                         },
                                                         success: function(res) {
                                                             if (res.statusCode == "200") {
-                                                                app.globalData.bindInfo = res.data.result;
+                                                                //app.globalData.bindInfo = res.data.result;
                                                                 that.setData({
                                                                     bindInfo: app.globalData.bindInfo
                                                                 })

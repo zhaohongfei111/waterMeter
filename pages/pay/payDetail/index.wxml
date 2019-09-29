@@ -1,13 +1,26 @@
+ <view class="selectView">
+ <i-cell-group>
+     <picker bindchange="bindPickerChange" value="{{index}}" range="{{bindInfo}}" range-key="{{'userName'}}">
+      <view class="picker">
+        <i-cell title="选择水表"  is-link>
+          <text slot="footer">{{selectInfo.userName}}</text>
+        </i-cell>
+      </view>
+      </picker>
+
+</i-cell-group>
+</view>
+
 <view class='pay'>
     <view class='money_charge'>
         <button class='{{payVal==10?"money_box1":"money_box"}}' bindtap='selectPayVal' data-payVal="10">10元</button>
         <button class='{{payVal==30?"money_box1":"money_box"}}' bindtap='selectPayVal' data-payVal="30">30元</button>
-        <button class='{{payVal==50?"money_box1":"money_box"}}'bindtap='selectPayVal' data-payVal="50">50元</button>
+        <button class='{{payVal==50?"money_box1":"money_box"}}' bindtap='selectPayVal' data-payVal="50">50元</button>
     </view>
     <view class='money_charge'>
         <button class='{{payVal==100?"money_box1":"money_box"}}' bindtap='selectPayVal' data-payVal="100">100元</button>
         <button class='{{payVal==300?"money_box1":"money_box"}}' bindtap='selectPayVal' data-payVal="300">300元</button>
-        <button class='{{payVal==500?"money_box1":"money_box"}}'  bindtap='selectPayVal' data-payVal="500">500元</button>
+        <button class='{{payVal==500?"money_box1":"money_box"}}' bindtap='selectPayVal' data-payVal="500">500元</button>
     </view>
 </view>
 <i-button  type="primary" size="small" bindtap="confirmPay">确认充值</i-button>
