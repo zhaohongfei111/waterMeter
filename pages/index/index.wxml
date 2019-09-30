@@ -9,5 +9,5 @@
   </view>
 
 </view> -->
-	
-<div id="preloader_3"></div>
+	<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登录 </button>
+<div wx:else id="preloader_3"></div>

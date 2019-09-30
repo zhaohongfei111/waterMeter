@@ -1,7 +1,9 @@
 {
     "pages": [
-        "pages/pay/payRecord/index",
+
+        "pages/pay/openVavle/index",
         "pages/index/index",
+        "pages/pay/payRecord/index",
         "pages/mine/addMeter/index",
         "pages/logs/logs",
         "pages/pay/index/index",
@@ -9,7 +11,6 @@
         "pages/mine/index/index",
         "pages/pay/payDetail/index",
         "pages/mine/bindInfo/index",
-        "pages/pay/openVavle/index",
         "pages/pay/changeDefault/index"
 
     ],

@@ -11,13 +11,13 @@
 <view>
     <scroll-view class="scrollView" scroll-y="true">
         <view class="">
-            <i-card title="卡片标题">
+            <i-card title="用户1">
                 <!-- <view slot="content">内容不错</view> -->
                 <view slot="footer">尾部内容</view>
             </i-card>
         </view>
         <view class="card">
-            <i-card title="卡片标题">
+            <i-card title="用户1">
                 <!-- <view slot="content">内容不错</view> -->
                 <view slot="footer">尾部内容</view>
             </i-card>

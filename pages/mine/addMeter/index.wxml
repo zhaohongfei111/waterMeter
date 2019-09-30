@@ -2,7 +2,7 @@
 <view class="title">请绑定水表</view>
 <view class="container1">
     <view class="inputView">
-         <i-input value="{{meterInfo.meterAdd}}" title="水表编号" autofocus maxlength="100"/>
+         <i-input value="{{meterInfo.meterAdd}}" bind:change="inputChange" title="水表编号" autofocus maxlength="100"/>
      </view>
      <view class="scanView" bindtap="handleScan"><image  src = "../../../images/camera.png" /></view>
  </view>

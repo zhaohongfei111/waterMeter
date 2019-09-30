@@ -49,7 +49,9 @@ Page({
         })
 
     },
-
+    inputChange: function(e) {
+        this.setData({ meterAdd: e.detail.detail.value })
+    },
     bindSubmitConfirm: function() { //绑定添加
         var that = this;
         this.data.meterInfo.openid = app.globalData.openid;

@@ -15,5 +15,5 @@
 </i-cell-group>
 </view>
 <view > 
-    <i-button  type="primary" size="small" >开阀</i-button>
+    <i-button  type="primary" size="small" bindtap="openVavle">开阀</i-button>
 </view>
