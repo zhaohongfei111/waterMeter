@@ -187,7 +187,8 @@ Page({
                             }
                         })
                         that.onOpenNotify(that)
-                        that.readCharacteristics(that)
+                        //that.readCharacteristics(that)
+                        that.writeData(that);
                     }
                 })
 
@@ -219,7 +220,7 @@ Page({
         var _this = this;
         wx.onBLECharacteristicValueChange(function(res) {
             console.log("onNotifyChange")
-            console.log(msg);
+            console.log(res);
         })
 
     },
@@ -256,17 +257,57 @@ Page({
             }
         })
     },
-    writeData: function() {
-        var that = this;
-        wx.writeBLECharacteristicValue({
-            deviceId: that.deviceId,
-            serviceId: that.serviceId,
-            characteristicId: that.data.writeService,
-            value: buffer,
-            success: function() {
+    // onLoad:function(){
+    //   this.writeData(this)
+    // },
+   strToHexCharCode:function(str) {
+    　　if(str === "")
+　　　　return "";
+    　　var hexCharCode = [];
+    　　hexCharCode.push("0x");
+    　　for (var i = 0; i < str.length; i++) {
+      　　　　hexCharCode.push((str.charCodeAt(i)).toString(16));
+    　　}
+    　　return hexCharCode.join("");
+    },
+    writeData: function(that) {
+      
+      var condition = {
+        "meterProtocolType": 0,
+        "code": "0",
+        "meterType": 0,
+        "isBluetooth": true,
+        "sessionKey": "1231321321",
+        "meterIds": [
+          "1"
+        ]
+      }
+      wx.request({
+        url: app.data.apiUrl + 'services/app/MeterProtocol/OpenValveFrame',
+        method: 'POST',
+        header: {
+          Authorization: `Bearer ${app.globalData.token}`
+        },
+        data: condition,
+        success:function(e){
+          console.log(e.data.result.commandBodies[0].body)
+          console.log(that.strToHexCharCode(e.data.result.commandBodies[0].body))
+          let buffer = new ArrayBuffer(e.data.result.commandBodies[0].body)
+           wx.writeBLECharacteristicValue({
+             deviceId: that.data.deviceId,
+             // 这里的 serviceId 需要在 getBLEDeviceServices 接口中获取
+             serviceId: app.globalData.serviceId,
 
+             // 这里的 characteristicId 需要在 getBLEDeviceCharacteristics 接口中获取
+             characteristicId: that.data.writeService,
+             value: buffer,
+            success: function(res) {
+              console.log(res)
             }
         })
+        }})
+
+       
     },
     arrayBufferToHexString: function(buffer) {
         let bufferType = Object.prototype.toString.call(buffer)

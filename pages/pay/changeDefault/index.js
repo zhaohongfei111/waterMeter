@@ -21,13 +21,20 @@ Page({
             userCode: "无",
             userId: "无",
             userName: "无",
-            valueStatus: "无"
+            valueStatus: "无",
+            isDefault: "0"
         },
-        selectIndex: 0
+        selectIndex: 0,
+        position: 'left',
+        current: '1',
     },
-
+    handleFruitChange({ detail = {} }) {
+        this.setData({
+            current: detail.value
+        });
+    },
     selectDefault: function(e) {
-        console.log(e.currentTarget.dataset)
+        var that = this;
         this.setData({
             selectIndex: e.currentTarget.dataset.listindex
         })

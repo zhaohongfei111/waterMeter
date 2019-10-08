@@ -1,7 +1,15 @@
 <!--pages/pay/changeDefault/index.wxml-->
-<i-cell-group>
+<!-- <i-cell-group>
     <i-cell wx:for="{{bindInfo}}" bind:click="selectDefault" data-listIndex="{{index}}" title="{{item.userName}}" i-class="{{index==selectIndex?'red':''}}">
-        <text slot = "footer">{{item.userName==1?'默认':''}}</text>
+        <text slot = "footer">{{index==selectIndex?'默认':''}}</text>
     </i-cell>
-</i-cell-group>
+</i-cell-group> -->
+
+
+<i-panel title="group-水果">
+    <i-radio-group current="{{current}}" bindchange="handleFruitChange">
+        <i-radio wx:for="{{bindInfo}}" position="{{position}}" wx:key="{{item.meterAdd}}" value="{{item.userName}}">
+        </i-radio>
+    </i-radio-group>
+</i-panel>
 <i-button  type="primary" size="small" bindtap="bindDefault">绑定默认</i-button>

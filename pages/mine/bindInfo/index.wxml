@@ -10,11 +10,12 @@
     </view>
 </view>
 <view wx:if="{{bindInfo.length==0}}" class="nodata">
-    暂无绑定
+    <image class="noDataImg" src="../../../images/noData.jpg">
+        
+    </image>
+    
 </view>
 <i-button bind:click="addMeter" type="primary" >添加绑定</i-button>
 <i-button bind:click="unbindMeter" type="primary" >解除绑定</i-button>
 
-<modal hidden="{{!visiable}}" title="确认借出绑定" confirm-text="确认" cancel-text="取消"  bindconfirm="confirm" bindcancel="cancle">
-
-</modal>
+<modal hidden="{{!visiable}}" title="确认解除绑定" confirm-text="确认" cancel-text="取消"  bindconfirm="confirm" bindcancel="cancle"></modal>

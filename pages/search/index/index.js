@@ -77,127 +77,12 @@ Page({
         wx.navigateTo({
             url: "/pages/pay/payDetail/index?waterCode=" + this.data.selectInfo.meterAdd
         })
-
-    },
-    onLoad: function(options) {
-
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
-        var deviceId = "C6:00:00:00:00:10";
-        wx.openBluetoothAdapter({ // 调用 手机蓝牙
-            success: function(res) {
-                console.log("初始化蓝牙适配器成功")
-                wx.onBluetoothAdapterStateChange(function(res) {
-                    console.log("蓝牙适配器状态变化", res)
-                })
-                wx.startBluetoothDevicesDiscovery({
-                    success: function(res) {
-                        console.log("开始搜索附近蓝牙设备")
-                        console.log(res);
-                        wx.onBluetoothDeviceFound(function(res) {
-                            var devices = res.devices;
 
-
-                            if (devices[0].localName != "") {
-                                console.dir(devices)
-                            }
-                            // console.log(ab2hex(devices[0].advertisData))
-                        })
-
-                        // wx.createBLEConnection({
-                        //     deviceId: deviceId, //  搜索到的蓝牙 信息提供的(唯一性)
-                        //     success: function(res) {
-                        //         console.log(res);
-                        //         wx.hideLoading();
-                        //         wx.showToast({ // 微信弹框
-                        //             title: '连接中',
-                        //             icon: 'loading',
-                        //             duration: 5000,
-                        //             mask: true,
-                        //             success() {
-                        //                 wx.stopBluetoothDevicesDiscovery({ // 连接成功后 停止搜索蓝牙
-                        //                     success: function(res) {
-                        //                         console.log("停止蓝牙搜索")
-                        //                         console.log(res);
-                        //                     }
-                        //                 })
-                        //                 wx.showToast({
-                        //                     title: '连接成功',
-                        //                     icon: 'success',
-                        //                     duration: 1000,
-                        //                     success: function(res) {}
-                        //                 })
-
-
-                        //                 wx.getBLEDeviceServices({
-                        //                     // 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接
-                        //                     deviceId: deviceId,
-                        //                     success(res) {
-                        //                         console.log('device services:', res.services)
-                        //                         wx.getBLEDeviceCharacteristics({
-                        //                             // 这里的 deviceId 需要已经通过 createBLEConnection 与对应设备建立链接
-                        //                             deviceId,
-                        //                             // 这里的 serviceId 需要在 getBLEDeviceServices 接口中获取
-                        //                             serviceId: "E607FEE7-9D04-4625-963D-1AC43838DD2C",
-                        //                             success(res) {
-                        //                                 console.log('device getBLEDeviceCharacteristics:', res.characteristics)
-                        //                                 wx.readBLECharacteristicValue({
-                        //                                     //   deviceId 需要已经通过 createBLEConnection 与对应设备建立链接
-                        //                                     deviceId,
-                        //                                     // 这里的 serviceId 需要在 getBLEDeviceServices 接口中获取
-                        //                                     serviceId: "E607FEE7-9D04-4625-963D-1AC43838DD2C",
-
-                        //                                     // 这里的 characteristicId 需要在 getBLEDeviceCharacteristics 接口中获取
-                        //                                     characteristicId: "E607FEC9-9D04-4625-963D-1AC43838DD2C",
-                        //                                     success(res) {
-                        //                                         console.log('readBLECharacteristicValue:', res.errCode)
-                        //                                     },
-                        //                                     fail(res) {
-                        //                                         console.log(res)
-                        //                                     }
-                        //                                 })
-                        //                             }
-                        //                         })
-
-                        //                     },
-                        //                     fail(res) {
-                        //                         console.log(res)
-                        //                     }
-                        //                 })
-
-                        //             }
-                        //         })
-                        //         console.log("连接设备成功")
-                        //     },
-                        //     fail: function(res) {
-                        //         wx.hideLoading()
-                        //         wx.showToast({
-                        //             title: '连接设备失败',
-                        //             icon: 'fail',
-                        //             duration: 1000
-                        //         })
-                        //         console.log("连接设备失败")
-                        //         console.log(res)
-                        //     }
-                        // })
-
-                    }
-                })
-            },
-            fail: function(res) {
-                console.log("初始化蓝牙适配器失败")
-                wx.showModal({
-                    title: '提示',
-                    content: '请检查手机蓝牙是否打开',
-                })
-            },
-        })
-
-    },
 
     /**
      * 生命周期函数--监听页面显示

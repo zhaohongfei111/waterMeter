@@ -8,7 +8,7 @@
 </view>
 
 <i-cell-group>
-    <i-cell title="用户信息绑定" is-link url="/pages/mine/bindInfo/index" value="未绑定"></i-cell>
+    <i-cell title="用户信息绑定" is-link url="/pages/mine/bindInfo/index" value="{{app.globalData.bindInfo.length==0?'未绑定':'已绑定'}}"></i-cell>
 </i-cell-group>
 <i-cell-group i-class="cell2">
     <i-cell title="用户反馈" is-link url="/pages/index/index" ></i-cell>
