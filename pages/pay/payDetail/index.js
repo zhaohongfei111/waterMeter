@@ -112,6 +112,7 @@ Page({
         this.setData({
             bindInfo: app.globalData.bindInfo
         })
+        console.log(app.globalData.bindInfo)
         if (this.data.bindInfo.length != 0) {
             this.setData({
                 selectInfo: app.globalData.bindInfo[0]

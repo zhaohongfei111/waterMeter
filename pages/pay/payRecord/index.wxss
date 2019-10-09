@@ -2,9 +2,17 @@
 
 .scrollView {
     /* margin-top: 20rpx; */
-    height: calc(100vh-20rpx);
+    height: calc(100vh-50rpx);
 }
 
 view.card {
-    margin-top: 0rpx;
+    margin-top: 10rpx;
+    width: 710rpx;
+    margin-left: 20rpx;
+}
+
+.payRecord {
+    margin-top: 20rpx;
+    margin-left: 30rpx;
+    margin-bottom: 20rpx;
 }

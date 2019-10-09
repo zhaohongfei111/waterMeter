@@ -25,8 +25,7 @@ Page({
             isDefault: "0"
         },
         selectIndex: 0,
-        position: 'left',
-        current: '1',
+
     },
     handleFruitChange({ detail = {} }) {
         this.setData({
