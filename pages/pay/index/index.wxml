@@ -22,7 +22,7 @@
     <view>
         <view class="payRecord" bindtap = "toPayRecord">
             <image class="icon" src = "../../../images/payRecord1.png" />
-            <view >支付记录</view>
+            <view >充值记录</view>
         </view>
     </view>
 </view>

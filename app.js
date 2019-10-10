@@ -1,8 +1,8 @@
 //app.js
 App({
     data: {
-        //apiUrl: "https://meterapi.jsjymgroup.com/api/",
-        apiUrl: "http://meterapi.jsjymgroup.com/api/",
+        apiUrl: "https://meterapi.jsjymgroup.com/api/",
+        //apiUrl: "http://meterapi.jsjymgroup.com/api/",
         dingApi: "https://miniapp.dingxuanwei.com/api/"
     },
     onLaunch: function() {
@@ -141,4 +141,4 @@ App({
             // }
         ]
     }
-})  
+})

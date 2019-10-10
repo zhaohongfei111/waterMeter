@@ -4,4 +4,4 @@
         <text slot = "footer">{{index==selectIndex?'默认':''}}</text>
     </i-cell>
 </i-cell-group>
-<i-button  type="primary" size="small" bindtap="bindDefault" >绑定默认</i-button>
+<i-button  type="primary" size="small" bindtap="bindDefault" >修改默认</i-button>

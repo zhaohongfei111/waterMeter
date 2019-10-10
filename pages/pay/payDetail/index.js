@@ -44,10 +44,9 @@ Page({
         var condition = {
             "total": 1,
             "openID": app.globalData.openid,
-            "userId": selectInfo.userId,
-            "userName": selectInfo.userName,
-            "meterAdd": selectInfo.meterAdd,
-
+            "userId": this.data.selectInfo.userId,
+            "userName": this.data.selectInfo.userName,
+            "meterAdd": this.data.selectInfo.meterAdd,
         }
         wx.request({
             url: `${app.data.dingApi}WxPay/UnifiedOrder`,
@@ -90,7 +89,7 @@ Page({
                                 },
 
                                 success: function(res) {
-                                    console.log(res);
+                                    //刷新数据  跳转页面
                                 }
                             })
                         }
